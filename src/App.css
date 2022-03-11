@@ -1,0 +1,339 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app-border {
+  align-items: flex-start;
+  justify-content: center;
+  display: flex;
+  width: 60%;
+  height: 100%;
+  flex-direction: column;
+  padding: 5% 20%;
+  background: #fafafa;
+}
+
+.news-header {
+text-align: left;
+font: normal normal 900 40px/53px Roboto;
+letter-spacing: 0px;
+color: #000000;
+opacity: 1;
+font-family: Roboto, sans-serif;
+}
+
+.category-wrapper {
+  margin-top: 2.813rem;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+@media only screen and (max-width: 1000px) {
+  .category-wrapper {
+    grid-template-columns: auto auto auto auto;
+  }
+  .news-item-main-wrapper {
+    flex-direction: column;
+  }
+  .news-item-left-wrapper {
+    width: 80% !important;
+  }
+  .news-item-right-wrapper {
+    width: 40% !important;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .category-wrapper {
+    grid-template-columns: auto auto auto;
+  }
+  .news-item-main-wrapper {
+    flex-direction: column;
+  }
+  .news-item-left-wrapper {
+    width: 80% !important;
+  }
+  .news-item-right-wrapper {
+    width: 40% !important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .category-wrapper {
+    grid-template-columns: auto auto;
+  }
+  .news-item-main-wrapper {
+    flex-direction: column;
+  }
+  .news-item-left-wrapper {
+    width: 80% !important;
+  }
+  .news-item-right-wrapper {
+    width: 50% !important;
+  }
+}
+
+#add-icon-container {
+  width: 40px;
+}
+
+.cs-items,
+.cs-items-list {
+  background: #EAEAEA 0% 0% no-repeat padding-box;
+border-radius: 20px;
+opacity: 1;
+padding: 2px 2px 4px 2px ;
+cursor: pointer;
+vertical-align: middle;
+}
+
+.cs-items-list{
+  padding: 5px 15px 6px 15px;
+  margin-right: 10px;
+}
+
+
+.active-item {
+  background: #00F0C2 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+opacity: 1;
+padding: 2px 2px 4px 2px ;
+cursor: pointer;
+vertical-align: middle;
+padding: 5px 15px 6px 15px;
+margin-right: 10px;
+}
+
+.search-bar-wrapper {
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+box-shadow: 0px 0px 16px #00000010;
+border: 1px solid #E5E5E5;
+border-radius: 20px;
+opacity: 1;
+margin-top: 25px;
+/* padding: 2px 5px 2px 10px; */
+display: flex;
+align-items: center;
+width: 100%;
+}
+.search-icon {
+  margin: 10px 20px;
+}
+
+.search-text-area {
+  outline: none;
+  border: none;
+  height: 40px;
+  text-align: left;
+font: normal normal normal 14px/19px Roboto;
+letter-spacing: 0px;
+font-family: Roboto, sans-serif;
+margin-left: 10px;
+border-radius: 20px;
+}
+
+::placeholder {
+  opacity: 1;
+  color: #EBEBEB;
+}
+
+.news-item-main-wrapper {
+  display: flex;
+  width: 100%;
+  /* padding: 20px; */
+  margin: 20px 0px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 16px #00000010;
+  border: 1px solid #E5E5E5;
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.news-item-left-wrapper {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 38px;
+  padding: 20px;
+}
+.news-item-right-wrapper {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: auto;
+  margin: 20px;
+}
+
+.news-item-image {
+  width: 100%;
+  height: 146px;
+  border-radius: 9px;
+}
+
+.news-item-header {
+  text-align: left;
+font: normal normal bold 16px Roboto;
+letter-spacing: 0px;
+color: #212121;
+opacity: 1;
+font-family: Roboto, sans-serif;
+
+}
+
+.news-item-sub-text {
+  text-align: start;
+  text-align: left;
+font: normal normal normal 14px Roboto, sans-serif;
+letter-spacing: 0px;
+color: #393939;
+opacity: 1;
+}
+
+.news-item-author {
+  text-align: left;
+letter-spacing: 0px;
+color: #989898;
+opacity: 1;
+margin: 5px 0px 10px 0px;
+font-weight: medium;
+font-size: 12px;
+font-family: Roboto, sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.show-modal {
+  display: block;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 10% auto;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 40%;
+  box-shadow: 0px 0px 16px #00000010;
+  border-radius: 6px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 60px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.add-category-header {
+  font: normal normal 900 24px;
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0px;
+  color: #000000;
+  font-weight: 900;
+  font-size: 24px;
+
+}
+
+.add-category-button {
+  background: #000000 0% 0% no-repeat padding-box;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+
+.add-button-text {
+  color: #fff;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.add-icon-white {
+  margin-left: 10px;
+}
+
+.add-category-details {
+  outline: none;
+  border: none;
+  padding: 10px 0px;
+  border-bottom: 1.75px solid #ccc;
+  width: 100%;
+}
+
+.add-category-details::placeholder {
+  color: #000;
+  font-size: 14px;
+  font-family: Roboto, sans-serif;
+}
